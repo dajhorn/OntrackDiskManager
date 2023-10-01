@@ -1,0 +1,464 @@
+[BIOSFORWARD]
+Disk Manager CMOS Setup Instructions
+
+The following instructions have been customized for your system.  In addition to
+these instructions, you may need to refer to your computer owner's manual for
+information specific to your system.
+
+SETTING YOUR COMPUTER'S BIOS
+
+To use the new drive, you must change your BIOS settings.  Use these customized
+instructions as a checklist, checking off each step as you complete it.
+
+[SWAPDRIVEINTRO]
+Booting To Your New Hard Drive
+
+Your original boot partition has been copied to your new hard drive.  If you
+are going to boot to your new drive you will have to perform one of the
+following:
+
+   * Follow the instructions below for information on swapping your new
+     drive with your original boot drive.
+   * If you are using Windows XP or Windows 2000 and you have just copied your 
+     files to a new boot drive using Disk Manager Starter Edition then you need 
+     to follow specific instructions.  Important!  You must physically unplug your 
+     old boot drive from this machine before booting to Windows.  Failure to do so 
+     may damage your Windows installation.  The old boot drive may be connected 
+     after one successful Windows boot and shut down.
+   * If your BIOS supports booting to drives other then the primary master
+     drive, you can set the BIOS to boot to your new drive.  See your BIOS
+     documentation for instructions on how to do this.
+
+[SWAPDRIVEINTRO_SATA]
+Booting To Your New Hard Drive
+
+Your original boot partition has been copied to your new hard drive.  If you
+are going to boot to your new drive you will have to set the BIOS to boot to
+your new drive.  See your BIOS documentation for instructions on how to do this.
+
+[FORWARD]
+Custom Installation Manual
+
+DRIVE PREPARATION INSTRUCTIONS
+
+For easy installation, use these customized instructions as a checklist,
+checking off each step as you complete it.
+
+The following instructions have been customized for your system.  In addition
+to these instructions, you may need to refer to your computer owner's manual
+for information specific to your system, such as System Setup.
+
+[FORWARD2]
+FOLLOW THESE IMPORTANT PRECAUTIONS:
+-------------------------------------------------------------------------------
+   * Handle the disk drive ONLY by its frame.  NEVER touch the connectors or
+     any part of the circuit board.
+   * DO NOT apply pressure or attach labels to the circuit board or top cover.
+   * ALWAYS turn your computer off before beginning the installation and when
+     adding, removing or changing jumpers on any drive.
+   * Although switched off, ALWAYS keep your computer plugged into an
+     electrical outlet with an earth ground.  This minimizes the possibility of
+     damage from static discharge.
+   * Disconnect external telephone and network cables from the computer.
+   * Wear a grounded wrist strap if possible.  Attach the wrist strap to the
+     metal chassis of your computer.  DO NOT install in areas with
+     static-inducing carpets.
+   * Back up the disk drive's data before starting.
+   * ALWAYS note the orientation of all cables before disconnecting them.  Some
+     cables can be reattached in positions that don't make a proper
+     connection.
+   * You may need a Phillips screwdriver and mounting screws, needle-nose pliers 
+     to assist removing jumpers and an unused power connector.
+-------------------------------------------------------------------------------
+
+[ENTERCMOSSETUP]
+( ) RUNNING THE SYSTEM SETUP PROGRAM
+
+To change your computers settings, you must enter the 'Setup' or 'CMOS Setup'
+program of your computer and change the information.  There are several ways
+to enter the setup, depending on your computer make and model.  Usually on the
+initial power up, there will be a message stating 'Press DEL to enter Setup' or
+something similar.  It may be necessary to press the key quickly, as the boot
+sequence may continue on momentarily.
+
+Check your computer or motherboard manual for the correct key combination, or
+look for one of the following phrases or something similar with the word
+'Setup' in it.
+
+- Hit DEL if you want to run Setup
+- Press F1 to enter Setup
+- Press F2 to enter Setup
+- Press and hold CTRL-ALT-ESC to begin System Setup
+- To enter setup: Boot to a DOS prompt, and press CTRL-ALT-Enter
+- Press CTRL-ALT-S to enter Setup
+
+If you cannot determine how to enter the System Setup program, consult your
+computer's manual or contact the manufacturer.
+
+[ENABLESECONDARY]
+( ) ENABLING THE SECONDARY CONTROLLER
+
+After swapping drives you must enable the secondary controller in order to use
+the partitions on the secondary drive.  Refer to the following instructions for
+information about entering the System Setup program.
+
+[DISASSEMBLY]
+RUNNING THE SYSTEM SETUP PROGRAM
+
+NOTE: Some BIOSes will not allow you to change the settings for your new drive
+until after it is installed.  If your system does not allow you to configure
+settings until after your drive is installed, refer to this section after you
+have installed your drive.
+
+( ) Enter system setup (CMOS).
+
+   * Reboot your computer.
+   * Watch the screen - as your computer starts up - for a message describing how 
+     to run the System Setup program (also called BIOS or CMOS setup).  This is 
+     usually done by pressing the DELETE, ESC or F1 keys.
+   * Press the appropriate key to enter the System Setup program.
+
+NOTE: If you cannot determine the proper key sequence to enter System Setup,
+refer to your computer owner's manual or call your computer manufacturer for
+assistance.
+
+[SYSTEMSETUPAUTO]
+SYSTEM SETUP SETTINGS FOR THE NEW DRIVE
+
+( ) Verify or change the System Setup setting for your new hard drive in the
+%s %s position.
+
+   * Select "Auto" or "Enabled".  This allows your computer to configure itself
+     automatically for your new drive.  Master and Slave are often described as 
+     Drive 0 and Drive 1.
+   * Save the CMOS settings and exit the Setup program.
+
+[SYSTEMSETUPCOMMON]
+INSTRUCTIONS ON PHYSICALLY INSTALLING THE DRIVE
+
+( ) Turn off your computer.
+( ) Remove your computer cover.
+
+[PREADDTOCOPY]
+SETTING THE CONFIGURATION JUMPERS AND MOUNTING THE DRIVE
+
+Note: Cable Select is an alternate method to using the Master/Slave jumpers for
+identifying the Master or Slave device on ATA/ATAPI systems. If there are
+two devices on an ATA channel/cable, both devices must use either Cable Select
+or Master/Slave settings.  The instructions below describe using the
+Master/Slave jumpers, however, you can use Cable Select if you so desire.
+
+( ) Set the jumpers on the new drive for the following position:
+
+[ADDTOCOPYTABLE]
+
+New Drive:      %s
+Position:         %s
+Configuration:    %s
+
+[POSTADDTOCOPY]
+NOTE: For new drives that are being added as a boot (master) drive, this
+position is only temporary.  Your new drive must first be installed in this
+position to allow data to be transferred from your old drive to your new one.
+
+
+[CDROMMASTER]
+CHANGING THE CD-ROM DRIVE JUMPER SETTINGS
+
+( ) Change the jumpers on your CD-ROM drive from master to slave.  The correct
+jumper settings can usually be found on a label on top of the CD-ROM drive or
+near the jumper block on the back of the drive.
+
+[MAYNEEDTOCHANGEMASTERJUMPERS]
+CHANGING MASTER DRIVE JUMPER SETTINGS
+
+( ) The jumpers on your old drive may need to be changed.  Verify the jumper
+settings for the old drive.
+
+[PREMASTERDRIVE]
+CHANGING MASTER DRIVE JUMPER SETTINGS
+
+( ) Change the jumper settings on your old drive.
+
+[MASTERJUMPERSOK]
+MASTER DRIVE JUMPER SETTINGS
+
+( ) The jumper settings on your master drive do not need to be changed.
+
+[MASTERTABLE]
+Drive:           %s
+Position:         %s
+Configuration:    %s
+
+[POSTMASTERDRIVE]
+NOTE: The jumper settings on your old drive need to be changed when adding a
+slave drive.  You may need to remove the old drive to change the jumper
+settings.  After the jumpers are properly set, reinstall this drive.
+
+[SYSTEMLOCKUP1]
+-------------------------------------------------------------------------------
+TROUBLESHOOTING
+
+Full Capacity Limitations 
+
+If you have added a new drive and your system fails to detect the full capacity 
+of the drive there are several possible causes. For ATA drives less than 137GB, 
+most often this is caused by a BIOS limitation.  You can investigate updating 
+your BIOS with utilities provided by your system manufacturer, or you can let 
+Disk Manager add boot sector software that does the same thing.  If your ATA drive 
+is greater than 137GB then your operating system may also have a fundamental 
+limitation.  Windows XP Service Pack 1 or Windows 2000 Service Pack 3 or higher 
+are required to support ATA and Serial ATA drives larger than 137GB.
+
+
+System Lockup Information
+
+If you have added a new drive and your system locks up at boot time (right
+after turning the power on), or locks up during System Setup, there are several
+possible causes.
+
+If using parallel ATA, verify that the 40-pin ribbon cable is properly attached,
+making sure that pin 1 on the cable matches pin 1 on the drive.
+
+[SYSTEMLOCKUP9X]
+Next, if your new drive is larger than 33.8GB, you may have an Award 4.51 BIOS
+with a 33.8GB limitation that causes the system to hang during the Power On
+Self Test (POST).
+
+The best solution is to obtain a BIOS upgrade from your computer manufacturer
+to support drives greater than 33.8GB.
+
+Another solution for this 33.8GB limitation is to use the Disk Manager
+utility to issue a command to the drive that will make it report a size of 33.8GB
+or less.  This will alleviate the hang during POST and allow the system to boot.
+Using this method, Disk Manager will still be able to install the drive to the
+full capacity using the Dynamic Drive Overlay.
+
+To implement this solution, use the following instructions.
+1. Restart your computer and enter the System Setup program.  Change the
+   setting for your new drive to "NONE".  Save the settings, exit the System
+   Setup program and power down your computer.
+2. Insert your Disk Manager bootable diskette and power up your computer.
+3. From the main menu, select Utilities.
+4. Select the "Set Drive Size" utility.  Then your new drive.
+5. Follow the on-screen instructions to set the drive size.
+6. When you are finished setting the drive size, reboot your computer.  Enter
+   the System Setup program and set the drive type to "AUTO".  Save the
+   settings and exit the System Setup program.
+
+After following the instructions, restart your system with the
+Disk Manager Diskette.
+
+[SYSTEMLOCKUP2]
+If your new drive is over 32GB, and other solutions have not worked, your
+drive may provide an Alternate Capacity (AC) jumper that will lock the drives
+LBA size to approximately 32 GB - allowing it to be used on systems that do
+not support it (such as those having the Award BIOS 4.51 problem).  Follow the
+procedure below titled "For drives WITH an alternate capacity (AC) option
+jumper" to lock the drive size to approximately 32GB.  (Note if the AC jumper
+is used on a drive over 32GB, Ontrack's DDO will not see more than the AC
+jumper forced size of approximately 32GB).
+
+If your new drive is between 2.1Gb and 32GB, and your System Setup (CMOS) is
+set to "AUTO", you may have a BIOS with a 4096-cylinder limitation that hangs
+the system during auto-detection.  Your computer manufacturer may have a BIOS
+upgrade that will support more than 4096 cylinders.  To continue with this
+installation, your drive may provide an alternate capacity (AC) jumper setting
+that lowers the cylinder auto-detection to below the BIOS limitation barrier
+and still provide full drive capacity using your hard disk installation
+utility.
+
+In this case, power off your system and install your drive's AC jumper, or
+remove your new drive and go to the beginning of these instructions and follow
+each step.
+
+For drives WITH an alternate capacity (AC) option jumper:
+
+1. Install the AC jumper per drive label instructions.
+2. Set the CMOS drive type using ONE of the following methods listed in
+   preferred order:
+   a. Select "Automatic Drive Detection". This allows your computer to
+      configure itself automatically for your new drive.
+   b. Select "User-defined" or "Custom" drive setting and set to the following:
+      1024   cylinders
+        16   heads
+        63   sectors
+         0   write precomp (wp)
+         0   landing zone (lz)
+   c. Select Drive Type 1.
+
+For drives WITHOUT an alternate capacity (AC) option jumper, choose option b)
+or c) in step 2 above.
+
+[MOUNTDRIVE]
+INSTRUCTIONS FOR MOUNTING THE DRIVE
+
+( ) Mount the drive.
+
+1. Mount the drive in either the horizontal or the vertical position.  Use only 
+   6-32 UNC typical computer mounting screws.
+2. Slide the drive into the bay.
+3. Align the drive-bay screw holes with the threaded holes in the drive
+   housing or expansion brackets.  Hand thread the screws to lightly secure the
+   drive in the bay.  For some installations, you might have to use the screw
+   holes on the bottom (circuit board side) of the drive.
+4. Check the drive alignment and tighten the screws firmly.  DO NOT over
+   tighten.
+NOTE: If you need to attach the drive in a 5.25-inch bay, attach a pair of
+3.5-inch to 5.25-inch expansion.  Some computers require that you attach special
+hard-disk-drive mounting hardware to ensure that the drive mounts securely into
+the bay. Contact your computer dealer or refer to the documentation that comes
+with your computer if you need specialized mounting hardware or more information.
+
+[ATTACHCABLE]
+INSTRUCTIONS FOR ATTACHING CABLES TO THE DRIVE
+
+( ) Attach the cables to your new drive.
+
+1. If using the 40-pin/80-conductor Ultra-ATA cable, attach the blue end
+   connector to the system board or host controller, the grey middle
+   connector to the Slave, and the black end connector to the Master. If
+   using the standard 40-pin cable a single drive should be connected to the
+   end connector; otherwise, the Master goes in the middle connector and the
+   Slave goes in the end connector.
+2. Be sure that pin 1, the colored wire on the interface cable, is closest to
+   the DC power connector.
+3. Find an unused power connector on a cable coming from the computer power
+   supply and attach it to the four-pin DC power connector.  The power
+   connector is keyed so that it attaches one way only.  DO NOT force it. If
+   the connector does not attach using reasonable pressure, turn it and try
+   again.
+4. Verify that the cables do not interfere with the computer cover and do not
+   block the power-supply fan blades or air-flow paths.
+
+NOTE: If all power cables are in use, purchase a DC Y-connector (available at
+many electronic stores) and split a connection to provide power for more
+devices.
+
+[ATTACHCABLE_SATA]
+INSTRUCTIONS FOR ATTACHING CABLES TO THE DRIVE
+
+( ) Attach the cables to your new drive.
+
+1. Attach the Serial Data cable to the drive.  Attach the other end of the cable
+   to the system board or host controller.  Both ends of the data cable are keyed
+   so that they attach one way only.  DO NOT force it.  Both ends of the Serial 
+   ATA cable are the same.
+2. Some systems allow for Serial ATA drives to be powered using a 3.3V connection
+   on the system board.  For more information on this type of connection, please
+   consult your system board manual.  Otherwise, find an unused power connector
+   on a cable coming from the computer power supply and attach it to the DC power
+   connector on the drive, an adapter may be necessary.   The power
+   connector is keyed so that it attaches one way only.  DO NOT force it. If
+   the connector does not attach using reasonable pressure, turn it and try
+   again.
+3. Verify that the cables do not interfere with the computer cover and do not
+   block the power-supply fan blades or air-flow paths.
+
+NOTE: If all power cables are in use, purchase a DC Y-connector (available at
+many electronic stores) and split a connection to provide power for more
+devices.
+
+[RECONNECTDEVICES]
+( ) Reconnect all devices.  Make sure that the keyboard, mouse and monitor
+cables are firmly connected.
+
+( ) Reconnect all AC power cords.
+
+[REMOUNT]
+NOTE: It may be necessary to dismount your drive in order to change the jumper
+settings for it.  If this is the case, then dismount your drive, configure it
+with the proper jumper settings, and remount it using the same procedure as
+was described in MOUNTING THE DRIVE earlier in this manual.
+
+[REASSEMBLY]
+REASSEMBLING THE COMPUTER
+
+( ) Completing the physical installation of your new drive.
+
+After you have completed the customized instructions to configure your new
+drive, verify that the drive is securely mounted and the cables are firmly
+attached.  Verify that the cables do not interfere with the computer cover and
+do not block the power-supply fan blades or airflow paths.  Replace the
+computer cover.  Reconnect all devices. Make sure that the keyboard, mouse and
+monitor are firmly connected.  Reconnect all AC power cords.
+
+[CONTINUEINSTALL]
+( ) Physical drive installation is complete!  Boot your computer back to your
+Disk Manager diskette and Disk Manager will partition and format your
+new hard drive.  Follow the Disk Manager instructions after formatting your drive.  
+If you are building a new system, have your Windows operating system setup boot 
+CD or floppy diskettes ready to use.
+
+[PREMOVE]
+POSITIONING THE DRIVES CORRECTLY
+
+( ) Turn off your computer.
+( ) Remove your computer cover, if necessary.
+
+[CHANGEJUMPERS]
+( ) Change jumpers on drive %s
+
+[MOVEDRIVE]
+( ) Move drive %s
+and change its jumpers
+
+[REMOVEDRIVE]
+( ) Remove drive %s
+from the system.
+
+[JUMPERSETTINGS1PCI]
+from its old position of: %s %s (PCI controller)
+
+[JUMPERSETTINGS1MBOARD]
+from its old position of: %s %s (motherboard controller)
+
+[JUMPERSETTINGS2PCI]
+to its new position of: %s %s (PCI controller)
+
+This is the final position of this drive.
+
+[JUMPERSETTINGS2MBOARD]
+to its new position of: %s %s (motherboard controller)
+
+This is the final position of this drive.
+
+[MOVEDRIVE_SATA]
+( ) Disconnect the current boot drive: %s
+from the Serial ATA controller and attach the new boot drive in that
+same (lowest numbered) position.  If you still wish to use the old boot
+drive, reattach it to the Serial ATA controller using any available
+connection.
+
+[MOVEDRIVE_NONSATA]
+( ) Restart your computer.
+( ) Enter the System Setup to change the boot order so that the computer
+boots to Serial ATA before other device types.  Consult your system manual or
+manufacturer for more information on how to change this setting.
+
+[REBOOT]
+EXITING THE SYSTEM SETUP PROGRAM
+
+( ) After you have made the appropriate changes, save the CMOS settings and
+exit the CMOS setup program.
+
+[INSTALLIDECARD]
+INSTALLING THE ATA ADAPTER CARD
+
+( ) Disk Manager did not detect any ATA adapter cards installed in your
+system.  If you do not already have an ATA adapter card installed in your
+system, follow the instructions in the owner's manual of the ATA adapter
+card and install the card.
+
+[PREADDTOCOPYNEWIDECARD]
+SETTING THE CONFIGURATION JUMPERS ON THE ADDITIONAL IDE ADAPTER
+
+( ) Set the jumpers for the new drive on your additional IDE adapter card for
+the following position:
+
+New Drive:      %s
+Position:         %s
+Configuration:    %s
+
+
+
