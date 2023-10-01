@@ -1,0 +1,107 @@
+; DM.DDF: Cabinet Manifest for Ontrack Disk Manager v10.46.06
+; Version: 2023-10-01
+;
+; Run `makecab /f DM.DDF` in the same directory as the DM\ payload folder.
+; Optionally delete the generated `setup.inf` and `setup.rpt` files.
+;
+; Older versions of makecab.exe, like that bundled with Windows XP, do not
+; recognize FolderFileCountThreshold=0 nor FolderSizeFolderSizeThreshold=0,
+; so use 2^16-1 instead for maximally solid compression. 
+
+; Cabinet Options
+.Option Explicit
+.Set Cabinet=on
+.Set Compress=on
+.Set CompressionType=LZX
+.Set CompressionLevel=7
+.Set CompressionMemory=21
+.Set CabinetFileCountThreshold=0
+.Set CabinetNameTemplate=DM.CAB
+.Set DiskDirectoryTemplate=.
+.Set DiskLabelTemplate=ONTRACK
+.Set FolderFileCountThreshold=65535
+.Set FolderSizeThreshold=65535
+.Set MaxCabinetSize=0
+.Set MaxDiskFileCount=0
+.Set MaxDiskSize=0
+.Set SourceDir=DM
+.Set UniqueFiles=On
+
+; Payload File List
+;
+; Order here affects output file size.
+; Maximize compression by grouping files with similar content.
+
+; ZINC Documentation
+137g.znc
+atasel.znc
+btorst.znc
+clipped.znc
+cmanual.znc
+custpart.znc
+dare.znc
+ddo.znc
+dipage.znc
+drvlist.znc
+eachpart.znc
+exit.znc
+ezrmv.znc
+filecpy.znc
+frame.znc
+help.znc
+info.znc
+lart1.znc
+lart2.znc
+locata.znc
+locbios.znc
+locpage.znc
+maint.znc
+maintdun.znc
+mbrbk.znc
+mymsg.znc
+newdrive.znc
+nooem.znc
+ntwarn.znc
+opts.znc
+overview.znc
+path.znc
+progress.znc
+rmddo.znc
+setmax.znc
+showdriv.znc
+step.znc
+system.znc
+unhide.znc
+utility.znc
+
+; Text Files
+jumpers.dbs
+sections.txt
+
+; Font Files
+extsys16.fnt
+iso_dial.fnt
+iso_smal.fnt
+iso_syst.fnt
+
+; W32 Binaries
+dmfatcpy.dll
+discfat.dll
+dmntfs.dll
+metwnd08.dll
+metwnd05.dll
+metwnd03.dll
+uiop.dll
+
+; DOS Binaries
+aspi2dos.sys
+aspi320.sys
+aspi4dos.sys
+aspi8dos.sys
+aspi8u2.sys
+ddloader.bin
+drmouse.com
+loadaspi.com
+xbios.exe
+dm.exe
+dm.res
