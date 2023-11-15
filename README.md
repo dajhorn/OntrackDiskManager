@@ -27,3 +27,6 @@ Changes from the upstream release are:
 5. The DDO is preinstalled to the floppy boot area so that the FreeDOS
    kernel does not complain about LBA translation errors involving large
    disks and/or large partitions at boot time.
+
+---
+![Disk Manager Help - About Disk Manager](https://github.com/dajhorn/OntrackDiskManager/assets/494022/b59e70a8-82b7-4a3b-90f6-af7e07a7e37c)
