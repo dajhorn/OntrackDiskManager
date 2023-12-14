@@ -1,14 +1,10 @@
 ; DM.DDF: Cabinet Manifest for Ontrack Disk Manager v10.46.06
-; Version: 2023-10-01
+; Version: 2023-12-14
 ;
 ; Run `makecab /f DM.DDF` in the same directory as the DM\ payload folder.
 ; Optionally delete the generated `setup.inf` and `setup.rpt` files.
-;
-; Older versions of makecab.exe, like that bundled with Windows XP, do not
-; recognize FolderFileCountThreshold=0 nor FolderSizeFolderSizeThreshold=0,
-; so use 2^16-1 instead for maximally solid compression. 
 
-; Cabinet Options
+; Best compression options for Makecab 5.00
 .Option Explicit
 .Set Cabinet=on
 .Set Compress=on
@@ -19,89 +15,100 @@
 .Set CabinetNameTemplate=DM.CAB
 .Set DiskDirectoryTemplate=.
 .Set DiskLabelTemplate=ONTRACK
-.Set FolderFileCountThreshold=65535
-.Set FolderSizeThreshold=65535
+.Set FolderFileCountThreshold=0
+.Set FolderSizeThreshold=0
 .Set MaxCabinetSize=0
 .Set MaxDiskFileCount=0
 .Set MaxDiskSize=0
 .Set SourceDir=DM
 .Set UniqueFiles=On
 
+; Older versions of makecab.exe, like that bundled with Windows XP, do not
+; recognize FolderFileCountThreshold=0 nor FolderSizeThreshold=0, so use
+; 2^16-1 instead for maximally solid compression.
+; 
+;.Set FolderFileCountThreshold=65535
+;.Set FolderSizeThreshold=65535
+
 ; Payload File List
 ;
 ; Order here affects output file size.
 ; Maximize compression by grouping files with similar content.
 
-; ZINC Documentation
-137g.znc
-atasel.znc
-btorst.znc
-clipped.znc
-cmanual.znc
-custpart.znc
-dare.znc
-ddo.znc
-dipage.znc
-drvlist.znc
-eachpart.znc
-exit.znc
-ezrmv.znc
-filecpy.znc
-frame.znc
-help.znc
-info.znc
-lart1.znc
-lart2.znc
-locata.znc
-locbios.znc
-locpage.znc
-maint.znc
-maintdun.znc
-mbrbk.znc
-mymsg.znc
-newdrive.znc
-nooem.znc
-ntwarn.znc
-opts.znc
-overview.znc
-path.znc
-progress.znc
-rmddo.znc
-setmax.znc
-showdriv.znc
-step.znc
-system.znc
-unhide.znc
-utility.znc
+; Plain Text
+JUMPERS.DBS
+SECTIONS.TXT
 
-; Text Files
-jumpers.dbs
-sections.txt
+; Fonts, sorted by file size
+ISO_SMAL.FNT
+ISO_DIAL.FNT
+ISO_SYST.FNT
+EXTSYS16.FNT
 
-; Font Files
-extsys16.fnt
-iso_dial.fnt
-iso_smal.fnt
-iso_syst.fnt
+; OpenZinc Documentation, sorted by file size
+HELP.ZNC
+MYMSG.ZNC
+137G.ZNC
+NTWARN.ZNC
+MAINTDUN.ZNC
+RMDDO.ZNC
+LOCBIOS.ZNC
+NOOEM.ZNC
+LOCPAGE.ZNC
+EXIT.ZNC
+UNHIDE.ZNC
+STEP.ZNC
+CLIPPED.ZNC
+CMANUAL.ZNC
+DDO.ZNC
+PROGRESS.ZNC
+EZRMV.ZNC
+INFO.ZNC
+FRAME.ZNC
+MBRBK.ZNC
+PATH.ZNC
+BTORST.ZNC
+DRVLIST.ZNC
+ATASEL.ZNC
+UTILITY.ZNC
+LART1.ZNC
+LART2.ZNC
+OPTS.ZNC
+DARE.ZNC
+SETMAX.ZNC
+FILECPY.ZNC
+MAINT.ZNC
+SYSTEM.ZNC
+OVERVIEW.ZNC
+CUSTPART.ZNC
+EACHPART.ZNC
+LOCATA.ZNC
+SHOWDRIV.ZNC
+NEWDRIVE.ZNC
+DIPAGE.ZNC
 
-; W32 Binaries
-dmfatcpy.dll
-discfat.dll
-dmntfs.dll
-metwnd08.dll
-metwnd05.dll
-metwnd03.dll
-uiop.dll
+; DOS Binaries, brute sort
+LOADASPI.COM
+DDLOADER.BIN
+DRMOUSE.COM
+XBIOS.EXE
+DM.EXE
 
-; DOS Binaries
-aspi2dos.sys
-aspi320.sys
-aspi4dos.sys
-aspi8dos.sys
-aspi8u2.sys
-ddloader.bin
-drmouse.com
-loadaspi.com
-xbios.exe
-dm.exe
-dm.res
+; W32 Binaries, sorted by file name
+DISCFAT.DLL
+DMFATCPY.DLL
+DMNTFS.DLL
+METWND03.DLL
+METWND05.DLL
+METWND08.DLL
+UIOP.DLL
+
+; Real mode Adaptec SCSI Drivers, sorted by file size
+ASPI4DOS.SYS
+ASPI2DOS.SYS
+ASPI8DOS.SYS
+ASPI8U2.SYS
+ASPI320.SYS
+
+; The OpenZinc application resource file.
+DM.RES
